@@ -10,6 +10,8 @@ As a user, I want to specify the time when I will receive the notifications, so 
 
 As a user, I want to be able to input my spouses phone number, so that they too will get a text message on the days where pregnancy likelihood is high.
 
+As a user, I need to specify the date of my or my spouses last cycle, so that I can get accurate forecasts about good times for trying to get pregnant.
+
 As a user, I want to be able to setup email notifications with a weekly schedule, so that I can see if any days are promising for trying to get pregnant. 
 
 As a user, I want to be able to connect my account with my spouse on the service, so that we can easily make plans when the time is right. 
