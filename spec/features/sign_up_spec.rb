@@ -3,6 +3,9 @@ require 'rails_helper'
 feature "User signs up for HumpDays" do
   # As a user, I want to be able to sign up using my Facebook or Twitter account,
   # so that sign up is simple.
+
+  # As a user, I want to be able to sign up using my email,
+  # so that sign up is disconnected from other social accounts.
   scenario "successful sign up using email" do
   end
 
