@@ -12,9 +12,20 @@ feature "User signs up for HumpDays", js: true do
   end
 
   scenario "successful sign up using email" do
+    click_button "Sign up using email"
+    fill_in "Email Address", with: "test@example.com"
+    fill_in "Password", with: "password1234"
+    fill_in "Password Confirmation", with: "password1234"
+    click_button "Create account"
+    expect(page).to have_content "Account succcessfully created!"
   end
 
   scenario "failed sign up using email" do
+    click_button "Sign up using email"
+    fill_in "Email Address", with: "test@example.com"
+    fill_in "Password", with: "password1234"
+    click_button "Create account"
+    expect_page.to have_content "There was a problem! Please fill in required fields."
   end
   
   scenario "successful sign up using Facebook" do
