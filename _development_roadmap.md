@@ -1,6 +1,6 @@
 ## Development Roadmap 
 
-1. Write tests for sign in, sign up
+*1. Write tests for sign in, sign up
 2. Implement Devise/omniauth
 3. Write tests for phone number form for user/spouse
 4. Implement phone number form after sign up

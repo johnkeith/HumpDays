@@ -34,6 +34,7 @@ group :test do
   gem 'coveralls', require: false
   gem 'valid_attribute'
   gem 'shoulda-matchers'
+  gem 'poltergeist'
 end
 
 group :production do
