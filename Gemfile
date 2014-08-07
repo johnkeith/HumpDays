@@ -16,6 +16,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+gem 'bourbon', '~>3.2'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails'
