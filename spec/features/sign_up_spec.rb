@@ -1,14 +1,13 @@
-require_relative '../rails_helper'
+require 'rails_helper'
 
 feature "User signs up for HumpDays", js: true do
-  # As a user, I want to be able to sign up using my Facebook or Twitter account,
-  # so that sign up is simple.
-
   # As a user, I want to be able to sign up using my email,
   # so that sign up is disconnected from other social accounts.
+
+  # As a user, I want to be able to sign up using my Facebook or Twitter account,
+  # so that sign up is simple.
   background do
-    visit root_path
-    click_button 'Sign Up'
+    click_sign_up
   end
 
   scenario "successful sign up using email" do
@@ -17,7 +16,7 @@ feature "User signs up for HumpDays", js: true do
     fill_in "Password", with: "password1234"
     fill_in "Password Confirmation", with: "password1234"
     click_button "Create account"
-    expect(page).to have_content "Account succcessfully created!"
+    success_notification
   end
 
   scenario "failed sign up using email" do
@@ -25,18 +24,26 @@ feature "User signs up for HumpDays", js: true do
     fill_in "Email Address", with: "test@example.com"
     fill_in "Password", with: "password1234"
     click_button "Create account"
-    expect_page.to have_content "There was a problem! Please fill in required fields."
+    faliure_notification
   end
   
   scenario "successful sign up using Facebook" do
+    click_button "Sign up using Facebook"
+    success_notification
   end
 
   scenario "failed sign up using Facebook" do
+    click_button "Sign up using Facebook"
+    faliure_notification
   end
 
   scenario "successful sign up using Twitter" do
+    click_button "Sign up using Twitter"
+    success_notification
   end
 
   scenario "failed sign up using Twitter" do
+    click_button "Sign up using Twitter"
+    faliure_notification
   end
 end
